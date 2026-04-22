@@ -41,10 +41,15 @@ def style_base_layout():
             }
 
             /* Global text */
-            .stApp,
+            .stApp {
+                color: #1E293B !important;
+                font-family: 'Outfit', sans-serif !important;
+            }
+
             .stApp p,
-            .stApp div,
-            .stApp label {
+            .stApp label,
+            .stApp h3,
+            .stApp h4 {
                 color: #1E293B !important;
                 font-family: 'Outfit', sans-serif !important;
             }
@@ -65,12 +70,6 @@ def style_base_layout():
                 color: #1E293B !important;
             }
 
-            h3, h4 {
-                font-family: 'Outfit', sans-serif !important;
-                color: #1E293B !important;
-            }
-
-            /* Buttons */
             button {
                 border-radius: 1.5rem !important;
                 background-color: #5865F2 !important;
@@ -102,18 +101,13 @@ def style_base_layout():
                 transform: scale(1.05);
             }
 
-            /* FIX MATERIAL ICONS */
-            .material-icons,
-            .material-symbols-outlined {
-                font-family: 'Material Symbols Outlined' !important;
-                font-weight: normal !important;
+            /* Keep Streamlit material icons working */
+            [data-testid="stButton"] i,
+            [data-testid="stButton"] span.material-symbols-outlined {
+                font-family: "Material Symbols Outlined" !important;
                 font-style: normal !important;
-                color: inherit !important;
-            }
-
-            /* Prevent icon text from breaking */
-            [data-testid="stButton"] span {
-                font-family: inherit;
+                font-weight: normal !important;
+                line-height: 1 !important;
             }
         </style>
     """, unsafe_allow_html=True)
