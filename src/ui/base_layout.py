@@ -3,26 +3,28 @@ import streamlit as st
 def style_background_home():
     st.markdown("""
         <style>
-               .stApp {
-                  background: #5865f2 !important;
-               }
+            .stApp {
+                background: #5865F2 !important;
+            }
 
-               .stApp div[data-testid="stColumn"]{
-                   background-color: #E0E3FF !important;
-                   padding:2.5rem !important;
-                   border-radius: 5rem !important;
-               }
+            .stApp div[data-testid="stColumn"] {
+                background-color: #E0E3FF !important;
+                padding: 2.5rem !important;
+                border-radius: 5rem !important;
+            }
         </style>
     """, unsafe_allow_html=True)
+
 
 def style_background_dashboard():
     st.markdown("""
         <style>
-               .stApp {
-                  background: #E0E3FF !important;
-               }
+            .stApp {
+                background: #E0E3FF !important;
+            }
         </style>
     """, unsafe_allow_html=True)
+
 
 def style_base_layout():
     st.markdown("""
@@ -38,8 +40,11 @@ def style_base_layout():
                 padding-top: 1.5rem !important;
             }
 
-            /* Global text color */
-            .stApp, .stApp p, .stApp div, .stApp span, .stApp label {
+            /* Global text */
+            .stApp,
+            .stApp p,
+            .stApp div,
+            .stApp label {
                 color: #1E293B !important;
                 font-family: 'Outfit', sans-serif !important;
             }
@@ -65,6 +70,7 @@ def style_base_layout():
                 color: #1E293B !important;
             }
 
+            /* Buttons */
             button {
                 border-radius: 1.5rem !important;
                 background-color: #5865F2 !important;
@@ -94,6 +100,20 @@ def style_base_layout():
 
             button:hover {
                 transform: scale(1.05);
+            }
+
+            /* FIX MATERIAL ICONS */
+            .material-icons,
+            .material-symbols-outlined {
+                font-family: 'Material Symbols Outlined' !important;
+                font-weight: normal !important;
+                font-style: normal !important;
+                color: inherit !important;
+            }
+
+            /* Prevent icon text from breaking */
+            [data-testid="stButton"] span {
+                font-family: inherit;
             }
         </style>
     """, unsafe_allow_html=True)
